@@ -40,3 +40,14 @@ space the volume can be attached somewhere else.
 
 You may need to run the script with sudo if the /data volume has restricted
 permissions.
+
+
+If you start feeding data into graphie before you set the renention rules
+updating the rules will not upate the whisper DB.
+Gotta update the DB with the following.
+You can replace the final arg with your own rention policy
+`/opt/graphite/bin/whisper-resize.py  /opt/graphite/storage/whisper/ 1m:28d`
+
+
+To gain shell accss to the graphte containter, in the case you don't have whipiser.py working locally.
+You can do so with `docker-compose run --entrypoint /bin/bash graphite`
