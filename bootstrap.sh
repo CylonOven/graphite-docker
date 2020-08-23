@@ -1,14 +1,15 @@
 #!/bin/bash
 
 # Create graphite directories
-if [ ! -d /home/tonis/Projects/graph/data/grafana ]
+if [ ! -d ./data/grafana ]
 then
-    mkdir -p /home/tonis/Projects/graph/data/grafana
+    mkdir -p ./data/grafana
+    chown 472.472 ./data/grafana
 fi
 
-if [ ! -d /home/tonis/Projects/graph/data/graphite ]
+if [ ! -d ./data/graphite ]
 then
-    mkdir -p /home/tonis/Projects/graph/data/graphite
+    mkdir -p ./data/graphite
 fi
 
 # Set up basic_auth
